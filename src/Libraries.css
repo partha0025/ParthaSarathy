@@ -1,0 +1,132 @@
+/* Full air bending background */
+.air-theme-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #d7f3ff, #c0e4ff, #a5dbff, #d7f3ff);
+  background-size: 400% 400%;
+  animation: swirlAir 25s ease-in-out infinite;
+  padding: 2rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Heading */
+.air-heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #012b3b; /* dark color for high contrast */
+  text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.6); /* soft glow */
+}
+
+
+/* Card style */
+.air-card {
+  background: rgba(255, 255, 255, 0.1); /* slightly more opaque */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(14px);
+  animation: floatEffect 6s ease-in-out infinite;
+  color: #082032; /* dark navy text */
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+
+
+/* Section titles */
+.section-title2 {
+  color: #064663; /* dark teal */
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  
+}
+
+
+/* Links */
+.air-link {
+  color: #0077b6;
+  text-decoration: underline;
+}
+.air-link:hover {
+  color: #023e8a;
+  text-shadow: none;
+}
+
+
+/* Pre/code block */
+pre {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  color: #aeefff;
+  overflow-x: auto;
+}
+
+/* List */
+ul {
+  list-style-type: '🌪️ ';
+  padding-left: 1.5rem;
+}
+.cod
+{
+    color:black;
+}
+/* Animations */
+@keyframes swirlAir {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes floatEffect {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .air-heading {
+    font-size: 2rem;
+  }
+
+  .air-card {
+    padding: 2rem 1.2rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+}
+
+.about-footer5 {
+  width: 100%;
+  color: #ffbb33;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  padding: 12px 0;
+  font-size: 1.3rem;
+  z-index: 15;
+  user-select: none;
+  font-family: 'Cinzel', serif;
+
+}
+
+.about-footer5 a,
+.about-footer5 .phone {
+  color: black;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.about-footer5 a:hover {
+  transform: scale(1.2);
+  color: #00ffff;
+}
+
+.phone {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}

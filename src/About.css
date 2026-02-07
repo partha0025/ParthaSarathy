@@ -1,0 +1,96 @@
+/* About.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d0d0d;
+  color: white;
+}
+
+.about-wrapper {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-title {
+  font-size: 3rem;
+  font-family: 'Courier New', monospace;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+}
+
+.about-card {
+  background-color: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 20px;
+  max-width: 900px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.about-card p {
+  margin-bottom: 1rem;
+}
+
+.about-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  font-size: 1.5rem;
+}
+
+.about-footer a,
+.about-footer .phone {
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.about-footer a:hover {
+  transform: scale(1.2);
+  color: #00ffff;
+}
+
+.phone {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.about-wrapper {
+  /* keep your existing styles */
+  position: relative;
+  overflow: hidden;
+
+  /* animated gradient background */
+  background: linear-gradient(270deg, #0f0f0f,gray,gray, #0f0f0f);
+  background-size: 800% 800%;
+  animation: gradientShift 20s ease infinite;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+

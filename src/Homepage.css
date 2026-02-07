@@ -1,0 +1,126 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+
+/* FULL CONTAINER */
+.container-fluid {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+}
+
+/* TITLE */
+.title {
+  font-weight: 600;
+  padding: 0.5rem;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 2rem;
+}
+
+/* NAVBAR */
+nav {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.text_about {
+  font-size: 15px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  padding: 0.4rem 0.7rem;
+  margin: 0 0.3rem;
+}
+
+.text_about:hover {
+  color: #0d6efd;
+  transform: scale(1.05);
+}
+
+/* WELCOME SECTION */
+main {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  text-align: center;
+}
+
+/* PROFILE IMG */
+.profile_img {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border: 5px solid white;
+}
+
+/* TEXT WELCOME */
+.text_welcome {
+  max-width: 90%;
+  padding: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* PARAGRAPH */
+.para {
+  text-align: justify;
+  font-size: 14px;
+}
+
+/* HEADER BG */
+.header-gradient {
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  padding: 0.8rem 1rem;
+}
+
+/* FOOTER */
+.footer-gradient {
+  background: linear-gradient(135deg, #6c757d, #343a40);
+  padding: 0.7rem;
+}
+
+footer a {
+  font-size: 1.5rem;
+}
+
+/* MEDIA QUERIES FOR DESKTOP */
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  main {
+    flex-direction: row;
+    text-align: left;
+    padding: 2rem 4rem;
+  }
+
+  .profile_img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .text_welcome {
+    max-width: 500px;
+    font-size: 1.05rem;
+  }
+
+  .para {
+    font-size: 16px;
+  }
+}
+
+.resume
+{
+  color:skyblue;
+  text-decoration: none;
+ 
+}
+

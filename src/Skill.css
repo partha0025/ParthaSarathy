@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d0d0d;
+  color: white;
+}
+
+.skill-wrapper {
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  background: linear-gradient(270deg, #0f0f0f, #1a1a1a, #0f0f0f);
+  background-size: 600% 600%;
+  animation: gradientShift 25s ease infinite;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.skill-title {
+  font-size: 3rem;
+  font-family: 'Courier New', monospace;
+  background: linear-gradient(to right, red, silver);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2.5rem;
+}
+
+.skill-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.skill-card {
+  background-color: #1e1e1e;
+  padding: 2rem 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 198, 255, 0.15);
+  flex: 1 1 280px;
+  max-width: 320px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 40px red;
+}
+
+.skill-card h2 {
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+  color: red;
+}
+
+.skill-card ul {
+  padding-left: 1.2rem;
+}
+
+.skill-card ul ul {
+  margin-top: 0.5rem;
+  list-style-type: disc;
+}
+
+.icon {
+  font-size: 1.8rem;
+  color: #00c6ff;
+}
+
+/* Make sure the wrapper fills the screen and shows the animated gradient */
+.skill-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(270deg, #00c6ff,rgba(17, 3, 95, 0.041),rgba(0, 198, 255, 0.4));
+  background-size: 600% 600%;
+  animation: gradientShift 25s ease infinite;
+  padding: 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Gradient animation keyframes */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Example styling for cards */
+.card {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* Header styles */
+.head_skill {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Optional: style lists to stand out */
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Responsive tweaks if you want */
+@media (max-width: 768px) {
+  .card {
+    margin: 10px;
+  }
+}

@@ -1,0 +1,139 @@
+.internship-section {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  background: radial-gradient(circle at bottom, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Title */
+.section-title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+  letter-spacing: 3px;
+  text-shadow: 0 0 15px rgba(137, 194, 255, 0.6);
+}
+
+/* Grid */
+.internship-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  justify-items: center;
+}
+
+/* Card Wrapper */
+.internship-card-wrapper {
+  perspective: 1200px;
+  width: 100%;
+  max-width: 380px;
+  height: 420px;
+}
+
+/* Card */
+.internship-card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.9s cubic-bezier(.4,.2,.2,1);
+}
+
+.internship-card:hover {
+  transform: translateY(-10px);
+}
+
+.internship-card.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Faces */
+.card-front,
+.card-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1.6rem;
+  backface-visibility: hidden;
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 20px 40px rgba(0,0,0,.5);
+}
+
+/* Front */
+.card-front h3 {
+  color: #89c2ff;
+  margin-bottom: .5rem;
+}
+
+.duration {
+  color: #a9c3ff;
+  font-weight: 600;
+}
+
+.company {
+  margin: .5rem 0;
+  font-weight: 500;
+}
+
+.card-front ul {
+  margin-top: 1rem;
+  padding: 0;
+  list-style: none;
+  font-size: .95rem;
+}
+
+/* Back */
+.card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-back img {
+  max-width: 90%;
+  border-radius: 12px;
+  transition: transform .4s ease;
+}
+
+.card-back img:hover {
+  transform: scale(1.05);
+}
+
+/* Stars */
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%,100% { opacity: .8; }
+  50% { opacity: .2; transform: scale(1.4); }
+}
+
+/* Footer */
+.about-footer36 {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  font-size: 1.5rem;
+}
+
+.about-footer36 a:hover {
+  color: #ffd86e;
+  transform: scale(1.15);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .internship-card:hover {
+    transform: none;
+  }
+}

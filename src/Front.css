@@ -1,0 +1,343 @@
+
+
+body {
+  margin: 0;
+  background: linear-gradient(
+    135deg,
+    var(--background-gradient-start) 0%,
+    var(--background-gradient-end) 100%
+  );
+  font-family: var(--font-sans);
+  color: var(--text-dark);
+  scroll-behavior: smooth;
+}
+
+/* Container */
+.land-bg {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+/* Cards */
+.project-description,
+.billing-system {
+  background: #e9f2e9;
+  border-radius: 24px;
+  box-shadow: 0 8px 20px var(--shadow-color);
+  padding: 2.5rem 3rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.project-description:hover,
+.billing-system:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 18px 40px var(--shadow-color);
+  border-color: var(--primary-light);
+  cursor: pointer;
+}
+
+/* Headings */
+.page-heading {
+  font-weight: 900;
+  font-size: 2.7rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  position: relative;
+  user-select: none;
+}
+
+.page-heading .underline {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  height: 5px;
+  width: 0;
+  background: var(--primary-color);
+  border-radius: 4px;
+  transition: width 0.35s ease;
+}
+
+.page-heading:hover .underline {
+  width: 60px;
+}
+
+.h22,
+.h33 {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.h22{
+  font-size: 1.8rem;
+}
+
+.h33{
+  font-size: 1.4rem;
+}
+
+/* Lists */
+.land-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: var(--text-dark);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.land-list li {
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.land-list li:hover {
+  color: var(--primary-light);
+}
+
+/* Links & buttons */
+.land-link,
+a.btn {
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a.btn {
+  border-radius: 30px;
+  padding: 0.55rem 1.3rem;
+  font-size: 1rem;
+}
+
+a.btn-success {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+}
+
+a.btn-success:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
+  color: #fff;
+}
+
+a.btn-outline-success {
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+a.btn-outline-success:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+a.btn-primary {
+  background-color: #1e88e5;
+  border-color: #1e88e5;
+  color: white;
+}
+
+a.btn-primary:hover {
+  background-color: #1565c0;
+  border-color: #1565c0;
+  color: white;
+}
+
+/* Code block */
+.land-code {
+  background: #c7e1c7;
+  padding: 1rem 1.3rem;
+  border-radius: 14px;
+  overflow-x: auto;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.95rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  user-select: text;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Fade-in animation */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .page-heading {
+    font-size: 2.1rem;
+  }
+  h22 {
+    font-size: 1.5rem;
+  }
+  h33 {
+    font-size: 1.2rem;
+  }
+  .project-description,
+  .billing-system {
+    padding: 2rem 1.5rem;
+  }
+  .land-bg {
+    padding: 2rem 1rem 4rem;
+  }
+}
+
+/* Dynamic heading style */
+.page-heading {
+  position: relative;
+  font-weight: 900;
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 2rem;
+  margin-bottom: 3rem;
+  z-index: 1;
+  user-select: none;
+  letter-spacing: 2px;
+  overflow: hidden;
+  cursor: default;
+
+  /* Text shadow glow */
+  text-shadow:
+    0 0 5px #a5d6a7,
+    0 0 10px #81c784,
+    0 0 20px #4caf50,
+    0 0 40px #4caf50;
+}
+
+/* Animated gradient background behind heading text */
+.heading-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    270deg,
+    #4caf50,
+    #81c784,
+    #a5d6a7,
+    #4caf50,
+    #81c784
+  );
+  background-size: 1000% 1000%;
+  filter: blur(30px);
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+  animation: gradientShift 15s ease infinite;
+  z-index: -1;
+  opacity: 0.75;
+}
+
+/* Shimmer shine effect on text */
+.shine {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  animation: shineMove 3s infinite;
+  pointer-events: none;
+  z-index: 2;
+  border-radius: 20px;
+}
+
+/* Gradient animation keyframes */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Shimmer animation keyframes */
+@keyframes shineMove {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
+/* Dynamic background container */
+.dynamic-bg {
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #a8d5ba, #4a7c59);
+  animation: bgGradientShift 30s ease infinite;
+}
+
+@keyframes bgGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Footer styles */
+.about-footer1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  justify-content: center;
+  margin: 5px;
+  background-color: ;
+}
+
+.about-footer1 a,
+.about-footer1 .phone {
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.about-footer1 a:hover {
+  transform: scale(1.3);
+  color: #00ffff;
+}
+
+.phone {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+.project-description,
+.billing-system {
+  color: var(--text-dark);
+}
+
+.dynamic-bg {
+  color: var(--text-light);
+}
