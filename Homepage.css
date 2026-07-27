@@ -1,0 +1,373 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+
+/* FULL CONTAINER */
+.container-fluid {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+}
+
+/* TITLE */
+.title {
+  font-weight: 600;
+  padding: 0.5rem;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 2rem;
+}
+
+/* NAVBAR */
+
+
+.text_about {
+  font-size: 35px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0.4rem 0.7rem;
+  margin: 0 0.3rem;
+  font-weight: 600;
+}
+
+.text_about:hover {
+  color: #0d6efd;
+  transform: scale(1.05);
+}
+
+/* WELCOME SECTION */
+main {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  text-align: center;
+}
+
+/* PROFILE IMG */
+.profile_img {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border: 5px solid white;
+}
+
+/* TEXT WELCOME */
+.text_welcome {
+  max-width: 90%;
+  padding: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* PARAGRAPH */
+.para {
+  text-align: justify;
+  font-size: 14px;
+}
+
+
+/* FOOTER */
+.footer-gradient {
+  background: white;
+  padding: 0.7rem;
+}
+
+footer a {
+  font-size: 1.5rem;
+}
+
+/* MEDIA QUERIES FOR DESKTOP */
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  main {
+    flex-direction: row;
+    text-align: left;
+    padding: 2rem 4rem;
+  }
+
+  .profile_img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .text_welcome {
+    max-width: 500px;
+    font-size: 1.05rem;
+  }
+
+  .para {
+    font-size: 16px;
+  }
+}
+
+.resume
+{
+  color:skyblue;
+  text-decoration: none;
+ 
+}
+
+/* =====================================================
+                ACHIEVEMENT CARD
+===================================================== */
+
+.achievement-bubble{
+    min-width: 330px;
+    padding: 28px;
+    margin-right: 1px;
+
+    border-radius: 25px;
+    background: black;
+    backdrop-filter: blur(20px);
+
+    border: 5px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.35),
+        0 0 20px rgba(0,217,255,.15);
+
+    transition: .4s ease;
+
+    animation: cardFloat 4s ease-in-out infinite;
+}
+
+.achievement-bubble:hover{
+
+    transform: translateY(-10px) scale(1.02);
+
+    box-shadow:
+        0 0 25px #00d9ff,
+        0 0 60px black;
+
+}
+
+/* ======================= */
+
+.achievement-title{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:25px;
+
+}
+
+.award-icon{
+
+    font-size:2rem;
+
+    color:#FFD700;
+
+    animation: rotateIcon 5s linear infinite;
+
+}
+
+.achievement-title h4{
+
+    margin:0;
+
+    color:#00d9ff;
+
+    font-size:1.5rem;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+}
+
+/* ======================= */
+
+.achievement-section{
+
+    margin-bottom:1px;
+
+}
+
+.achievement-section h5{
+
+    color:#FFD54F;
+
+    margin-bottom:15px;
+
+    font-size:1.05rem;
+
+    font-weight:600;
+
+}
+
+/* ======================= */
+
+.badge-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:11px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.badge-item:last-child{
+
+    border:none;
+
+}
+
+.badge-item:hover{
+
+    transform:translateX(8px);
+
+}
+
+.badge-item span:first-child{
+
+    color:white;
+
+    font-size:.96rem;
+
+}
+
+.gold{
+
+    color:#FFD700;
+
+    font-weight:600;
+
+}
+
+.silver{
+
+    color:#E0E0E0;
+
+    font-weight:600;
+
+}
+
+/* ======================= */
+
+.leetcode-box{
+
+    text-align:center;
+
+    margin-top:5px;
+
+    padding:1px;
+
+    border-radius:18px;
+
+    background:rgba(0,217,255,.12);
+
+    border:1px solid rgba(0,217,255,.25);
+
+    transition:.35s;
+
+}
+
+.leetcode-box:hover{
+
+    background:#00d9ff;
+
+    transform:scale(1.05);
+
+}
+
+.leetcode-box:hover p,
+.leetcode-box:hover .count{
+
+    color:#000;
+
+}
+
+.count{
+
+    display:block;
+
+    font-size:2.2rem;
+
+    font-weight:700;
+
+    color:gold;
+
+}
+
+.leetcode-box p{
+
+    color:gold;
+    font-size:1rem;
+
+}
+
+/* =====================================================
+                  ANIMATIONS
+===================================================== */
+
+@keyframes cardFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+
+@keyframes rotateIcon{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* =====================================================
+                  RESPONSIVE
+===================================================== */
+
+@media(max-width:992px){
+
+    .achievement-bubble{
+
+        width:100%;
+        min-width:unset;
+        max-width:420px;
+
+        margin:30px auto;
+
+    }
+
+}

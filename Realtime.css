@@ -1,0 +1,126 @@
+/* Background styling */
+.project-bg1 {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: radial-gradient(circle at top, #0a0f1d, #000000);
+  color: #e6f1ff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* Center the cards */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Main heading */
+.project-heading1 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #00e5ff;
+  text-shadow: 0 0 15px rgba(0, 229, 255, 0.8);
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+  animation: glowPulse 2s infinite alternate;
+}
+
+/* Project card */
+.project-details1 {
+  background: rgba(15, 25, 40, 0.85);
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  
+  /* Center alignment and width control */
+  width: 100%;
+  max-width: 800px;
+}
+
+.project-details1:hover {
+  transform: scale(1.02) translateY(-5px);
+  box-shadow: 0 0 35px rgba(0, 229, 255, 0.7);
+}
+
+/* Subheadings */
+.project-details1 h2 {
+  font-size: 1.9rem;
+  color: #1de9b6;
+  margin-bottom: 15px;
+  text-shadow: 0 0 8px rgba(29, 233, 182, 0.6);
+}
+
+.project-details1 h3 {
+  font-size: 1.3rem;
+  color: #00e5ff;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 6px rgba(0, 229, 255, 0.4);
+}
+
+/* Text styles */
+.project-details1 p {
+  color: #cfd8dc;
+  line-height: 1.6;
+}
+
+/* Lists */
+.project-details1 ul {
+  padding-left: 20px;
+}
+
+.project-details1 ul li {
+  margin-bottom: 8px;
+  color: #b0bec5;
+  position: relative;
+}
+
+.project-details1 ul li::before {
+  content: "🔹";
+  position: absolute;
+  left: -20px;
+}
+
+/* Links */
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #00e5ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.project-link:hover {
+  color: #1de9b6;
+  text-shadow: 0 0 10px rgba(29, 233, 182, 0.8);
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-details1 {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Glow pulse for heading */
+@keyframes glowPulse {
+  from {
+    text-shadow: 0 0 15px rgba(0, 229, 255, 0.8);
+  }
+  to {
+    text-shadow: 0 0 30px rgba(0, 229, 255, 1);
+  }
+}
+

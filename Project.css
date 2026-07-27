@@ -1,0 +1,143 @@
+.project-bg {
+  min-height: 100vh;
+  padding: 30px 15px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, white 0%, blue 50%, red 100%);
+  animation: ravenclawGlow 12s ease-in-out infinite alternate;
+  font-family: 'Cinzel', serif;
+  color: #c0c0c0;
+  text-shadow: 0 0 6px gray, 0 0 10px #4a6ea9;
+}
+
+.project-heading {
+  font-size: 3.5rem;
+  letter-spacing: 8px;
+  color: gold;
+  text-align: center;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 12px #a3b8f0, 0 0 18px #2e4c91;
+}
+
+.card-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.card-row {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hog-card {
+  width: 280px;
+  height: 160px;
+  background: linear-gradient(135deg, rgba(74, 110, 169, 0.85), rgba(38, 63, 111, 0.85));
+  border: 1px solid silver;
+  border-radius: 20px;
+  box-shadow: 0 0 20px gold, inset 0 0 15px rgba(255, 255, 255, 0.15);
+  padding: 25px;
+  color: gold;
+  font-family: 'Cinzel', serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.hog-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px #acc5ff, 0 0 50px #acc5ff, inset 0 0 25px #d1e0ff;
+  color: #f0f8ff;
+}
+
+.hog-card::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 25px;
+  height: 25px;
+  background: radial-gradient(circle, #acc5ff 20%, transparent 80%);
+  border-radius: 50%;
+  opacity: 0.7;
+  filter: drop-shadow(0 0 4px #acc5ff);
+  animation: sparkle 3s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes sparkle {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+  50% { transform: translate(5px, -5px) scale(1.3); opacity: 0.3; }
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.about-footer2 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 0;
+  background: transparent;
+  color: gold;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 1.3rem;
+  font-family: 'Cinzel', serif;
+  z-index: 999;
+}
+
+.about-footer2 a {
+  color: gold;
+  transition: color 0.3s ease;
+}
+
+.about-footer2 a:hover {
+  color: #a3b8f0;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .project-heading {
+    font-size: 2.5rem;
+  }
+
+  .card-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .hog-card {
+    width: 280px;
+    max-width: 90vw;
+    height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-heading {
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+
+  .hog-card {
+    height: 130px;
+    font-size: 1rem;
+  }
+}
